@@ -31,7 +31,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <nav>
-                    <form action="/posts/{{ Auth::user()->postID }}/filter" method="POST">
+                    <form action="/{{env('APP_PATH')}}/posts/{{ Auth::user()->postID }}/filter" method="POST">
                         {{ csrf_field() }}
                         <div class="btn-toolbar mb-3" role="toolbar">
                             <div class="btn-group mr-2" role="group">
