@@ -58,7 +58,7 @@ class PostController extends Controller
                 $post->IMAGE_PATH = $request->file('filename')->storeAs('public', $post->IMAGE_NAME);
                 $post->save();
                 $request->flash();
-                return redirect("posts/create/{$post->id}/filter");
+                return redirect(url()->current().'/posts/create/{$post->id}/filter');
             }
             else
             {
