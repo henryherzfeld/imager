@@ -119,7 +119,7 @@ class PostController extends Controller
 
     public function wall()
     {
-        $posts = DB::table('posts')->paginate(50);
+        $posts = DB::table('posts')->orderBy('updated_at', 'dec')->paginate(50);
         return view('wall', compact('posts'));
     }
 }

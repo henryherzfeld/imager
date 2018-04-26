@@ -13,13 +13,13 @@
         <div class="row justify-content-center">
             <div class="col-8">
 
-                <button type="button" href="{{route('posts/create')}}" class="btn btn-primary">Post Now!</button>
+                <a href="{{route('wall')}}"><input type="button" class="btn-lg btn-primary" value="Wall"></a>
 
             </div>
 
             <div class="col-2">
 
-                <button type="button" href="{{route('wall')}}" class="btn btn-primary">Wall</button>
+                <a href="{{route('posts/create')}}"><input type="button" class="btn-lg btn-primary" value="New Post"></a>
 
             </div>
         </div>
