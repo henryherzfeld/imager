@@ -41,7 +41,7 @@
                             </div>
                         </div>
                 <div class="card mb-3" style="width: 30rem;">
-                    <img class="card-img-top sepia blur saturate" src="{{ url('storage/'.App\Post::find(Auth::user()->postID)->IMAGE_NAME) }}">
+                    <img class="card-img-top sepia blur saturate" src="/~hherzfeld2014/p7/public/storage/{{ $post->IMAGE_NAME }}">
                     <div class="card-header">Choose Filter(s)</div>
                     <div class="card-body">
                         <div class="form-group d-flex">
