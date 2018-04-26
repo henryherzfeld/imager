@@ -58,7 +58,7 @@ class PostController extends Controller
                 $post->IMAGE_PATH = $request->file('filename')->storeAs('public', $post->IMAGE_NAME);
                 $post->save();
                 $request->flash();
-                return redirect("/~hherzfeld2014/public/posts/create/{$post->id}/filter");
+                return redirect("posts/create/{$post->id}/filter");
             }
             else
             {
@@ -80,7 +80,7 @@ class PostController extends Controller
              $post->save();
             }
             $request->flash();
-            return redirect("/~hherzfeld2014/public/posts/create/{$post->id}/caption");
+            return redirect("posts/create/{$post->id}/caption");
         }
         else if($step === 'caption')
         {
@@ -114,7 +114,7 @@ class PostController extends Controller
         DB::update('update users set postID = ? where  id = ?', [$post->id, Auth::user()->id]);
 
 
-        return redirect("/~hherzfeld2014/public/posts/create/{$post->id}/upload");
+        return redirect("posts/create/{$post->id}/upload");
     }
 
     public function wall()
