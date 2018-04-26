@@ -19,7 +19,7 @@
                 <nav>
                     {{--<form action="/posts/show" method="POST" enctype="multipart/form-data">--}}
                     <form action="/posts/{{ Auth::user()->postID }}/upload" method="POST" enctype="multipart/form-data">
-                        {{csrf}}
+                        {{ csrf_field() }}
                         <div class="btn-toolbar mb-3" role="toolbar">
                             <div class="btn-group mr-2" role="group">
                                 <button type="button" class="btn btn-secondary active">Upload</button>

@@ -32,7 +32,7 @@
             <div class="col-md-8">
                 <nav>
                     <form action="/posts/{{ Auth::user()->postID }}/filter" method="POST">
-                        @csrf
+                        {{ csrf_field() }}
                         <div class="btn-toolbar mb-3" role="toolbar">
                             <div class="btn-group mr-2" role="group">
                                 <button type="submit" class="btn btn-secondary">Upload</button>
