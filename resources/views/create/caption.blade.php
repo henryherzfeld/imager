@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div class="card mb-3" style="width: 30rem;">
-                            <img class="card-img-top" src="{{ url('storage/'.App\Post::find(Auth::user()->postID)->IMAGE_NAME) }}">
+                            <img class="card-img-top" src="/~hherzfeld2014/p7/public/storage/{{ App\Post::find(Auth::user()->postID)->IMAGE_NAME }}">
                             <div class="card-header">Caption & Verify</div>
                             <div class="card-body">
                                     <div class="form-group">
